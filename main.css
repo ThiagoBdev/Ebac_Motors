@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;   /*resete*/
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif; /*fontes adicionadas*/
+}
+
+html{
+    overflow-x:hidden ; /*faz com que tudo que passe da pagina na horizontal não apareça*/
+}
+
+.container{
+    max-width: 1024px; /*Largura maxima do container*/
+    width: 100%; /*Toda a largura que ele deve ocupar*/
+    margin: 0 auto; /*centralizado na horizontal*/
+}
+
+header{
+    position: sticky; /*faz com que o cabeçalho acompanhe o rolar da pagina*/
+    top: 0; /*deve ficar em cima durante a rolagem*/
+    left: 0;  /*deve ficar a extrema esquerda durante a rolagem*/
+    z-index: 1; /*corrige um pequeno bug da div em que o cabeçalho desapareçe durante a rolagem do header*/
+}
+
+header > .container,
+footer > .container{
+    justify-content: space-between;  /*faz com que o titulo fique a esquerda e o menu a direita*/
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+header, footer{
+    background-color: #0f0283;  /* cor do cabeçalho*/
+    padding-top: 16px; /*espaçamento em cima de 16px*/
+    color: #fff; /*Cor do texto*/
+}
+
+nav{
+    background-color: #3a06ba;
+    padding: 16px 0;
+    display: none;
+}
+
+nav li{
+    list-style: none;  /*Remove os pontos da lista*/
+    display: inline; /*mostra os itens um ao lado do outro*/
+    margin-right: 16px; /*margem a direita de 16px*/
+    font-size: 18px; /*fonte da letra*/
+    font-weight: bold; /*deixa a fonte em negrito*/
+    text-transform: uppercase; /*deixa todos os textos em maiusculos*/
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-hamburguer{
+    width: 32px; /*largura 32px*/
+    cursor: pointer;
+}
+
+.menu-hamburguer span{
+    height: 2px;
+    width: 100%; /*vai ocupar os 32px*/
+    background-color: #fff;
+    display: block;
+    margin-bottom: 4px; 
+}
+
+.container-flex{
+    display: flex;
+}
+
+#sobre-a-loja img{
+    max-width: 400px; /*tamanho maximo da imagem*/
+    margin-right: 24px; 
+}
+
+section{
+    padding: 48px 0;
+}
+
+section h2{
+    margin-bottom: 16px;
+}
+
+.lista-veiculos {
+    flex-wrap: wrap;
+}
+
+.lista-veiculos li{
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 24px;
+}
+
+.lista-veiculos li img{
+    max-width: 100%;
+}
+
+.lista-veiculos li h3{
+    margin: 16px 0;
+}
+
+.item-central{
+    margin: 0 5%;
+}
+
+button{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #119759;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.price{
+    margin: 16px 0;
+    display: block;
+}
+
+.price del{
+    color: #ccc;
+    font-size: 14px;
+}
+
+.form-campo{
+    margin-bottom: 16px ;
+}
+
+.form-campo label{
+    font-weight: bold;
+    display: block;
+}
+
+.form-campo input,textarea{
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+.form-campo textarea{
+    resize: none; /* impossibilita do usuario aumentar ou diminuir o text area*/
+    height: 120px;
+}
+
+form{
+    max-width: 360px;
+}
+
+form button{
+    max-width: 120px;
+}
+
+footer li{
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img{
+    height: 32px;
+}
+
